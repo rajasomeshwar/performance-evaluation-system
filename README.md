@@ -11,6 +11,8 @@ This project consists of two parts:
 The backend is built using **Spring Boot** and provides RESTful APIs to fetch employee data and performance analysis. API documentation is available via Swagger:
 
 [Swagger API Documentation](http://localhost:8085/swagger-ui/index.html#/)
+To See the Api documentation :
+  type this :  http://localhost:8085/swagger-ui/index.html#/
 
 ### Running the Backend
 To run the backend, ensure you have **Maven** installed and configured. Follow these steps:
@@ -47,7 +49,7 @@ The frontend is built using **React.js** and connects to the backend for data vi
 
 1. **Navigate to the frontend directory:**
    ```sh
-   cd performance-appraisal/frontend
+   cd frontend
    ```
 
 2. **Install dependencies:**
