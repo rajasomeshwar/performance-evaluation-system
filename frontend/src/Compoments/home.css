@@ -1,0 +1,289 @@
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem;
+}
+
+.dashboard-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+/* Box styles */
+.dashboard-box {
+  position: relative; /* Important for border positioning */
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;
+
+  overflow: hidden; /* Ensure the border doesn't overflow */
+}
+
+.dashboard-box:hover {
+  transform: scale(1.03);
+}
+
+.dashboard-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: visible; /* Changed from hidden to allow border to show */
+}
+.dashboard-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  margin: 2px; /* Add margin to make room for the border */
+  z-index: 1; /* Ensure content stays above the border */
+}
+
+/* Animated Border with lighter colors */
+.dashboard-box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    #ffcccc,
+    #ffd9b3,
+    #fffbe6,
+    #d9ffcc,
+    #ccffee,
+    #cce6ff,
+    #e0ccff,
+    #ffcce6,
+    #ffcccc
+  );
+  background-size: 400% 400%;
+  z-index: -1; /* Place behind the box */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  animation: gradient 5s ease infinite;
+}
+
+/* Show border on hover */
+.dashboard-box:hover::before {
+  opacity: 1;
+}
+
+/* Box hover effects */
+.dashboard-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Define the gradient animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Box content styles */
+.box-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.box-description {
+  color: #4b5563;
+}
+
+.box-icon-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.box-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon-add {
+  color: #3b82f6;
+}
+
+.icon-view {
+  color: #10b981;
+}
+
+.icon-update {
+  color: #f59e0b;
+}
+
+.icon-delete {
+  color: #ef4444;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 50rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.modal-close-button {
+  color: #6b7280;
+}
+
+.modal-close-button:hover {
+  color: #374151;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+
+/* Button styles */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.btn-cancel {
+  background-color: #d1d5db;
+  color: #1f2937;
+  margin-right: 0.5rem;
+}
+
+.btn-cancel:hover {
+  background-color: #9ca3af;
+}
+
+.btn-submit {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #2563eb;
+}
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Status message styles */
+.status-message {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+}
+
+.status-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
