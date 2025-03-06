@@ -19,7 +19,7 @@ To run the backend, ensure you have **Maven** installed and configured. Follow t
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-repo/performance-appraisal.git
+   git clone https://github.com/rajasomeshwar/performance-appraisal.git
    cd performance-appraisal/backend
    ```
 
