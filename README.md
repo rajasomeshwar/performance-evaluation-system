@@ -83,6 +83,4 @@ The frontend will be available at `http://localhost:3000/`.
 2. Make changes and test locally.
 3. Submit a pull request for review.
 
-## License
-This project is licensed under the MIT License.
 
