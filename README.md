@@ -78,9 +78,3 @@ The frontend will be available at `http://localhost:3000/`.
 - **Database:** MySQL
 - **API Documentation:** Swagger
 
-## Contribution Guidelines
-1. Fork the repository and create a feature branch.
-2. Make changes and test locally.
-3. Submit a pull request for review.
-
-
