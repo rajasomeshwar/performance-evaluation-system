@@ -59,8 +59,8 @@ public class EmployeeController {
   @GetMapping( "/testApi")
   @Operation(summary = "Test the Controller ", description = "Used for controller is working or not ")
   public String testMethod() { 
-     log.trace("Currently running the test method ");
-     log.debug("Debug is on ");
+     // log.trace("Currently running the test method ");
+     // log.debug("Debug is on ");
 	  return "It's Was Working";
   }
 }
